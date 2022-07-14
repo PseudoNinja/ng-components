@@ -1,0 +1,156 @@
+/* Theme - Default */
+:root {
+  --colors-black: #000;
+  --colors-white: #fff;
+  --colors-transparent: rgba(0, 0, 0, 0);
+
+  --colors-red-100: #4d0000;
+  --colors-red-90: #600;
+  --colors-red-80: #950404;
+  --colors-red-60: #bf4040;
+  --colors-red-40: #ef8f8f;
+  --colors-red-20: #f5bcbc;
+  --colors-red-10: #fce9e9;
+
+  --colors-orange-100: #4d2600;
+  --colors-orange-90: #630;
+  --colors-orange-80: #954c04;
+  --colors-orange-60: #bf8040;
+  --colors-orange-40: #efbf8f;
+  --colors-orange-20: #f5d9bc;
+  --colors-orange-10: #fcf2e9;
+
+  --colors-yellow-100: #4d4d00;
+  --colors-yellow-90: #660;
+  --colors-yellow-80: #959504;
+  --colors-yellow-60: #bfbf40;
+  --colors-yellow-40: #efef8f;
+  --colors-yellow-20: #f5f5bc;
+  --colors-yellow-10: #fcfce9;
+
+  --colors-green-100: #2e4832;
+  --colors-green-90: #365e3d;
+  --colors-green-80: #3f7d4a;
+  --colors-green-60: #43a854;
+  --colors-green-40: #77ca85;
+  --colors-green-20: #d6f5db;
+  --colors-green-10: #ebfaed;
+
+  --colors-teal-100: #00404d;
+  --colors-teal-90: #056;
+  --colors-teal-80: #047d95;
+  --colors-teal-60: #40aabf;
+  --colors-teal-40: #7dd6e8;
+  --colors-teal-20: #bcecf5;
+  --colors-teal-10: #e9f9fc;
+
+  --colors-blue-100: #00194d;
+  --colors-blue-90: #026;
+  --colors-blue-80: #043495;
+  --colors-blue-60: #406abf;
+  --colors-blue-40: #7da1e8;
+  --colors-blue-20: #b8cef9;
+  --colors-blue-10: #e6eefe;
+
+  --colors-purple-100: #4d004d;
+  --colors-purple-90: #606;
+  --colors-purple-80: #950495;
+  --colors-purple-60: #bf40bf;
+  --colors-purple-40: #e87de8;
+  --colors-purple-20: #f9b8f9;
+  --colors-purple-10: #fee6fe;
+
+  --colors-pink-100: #4d001a;
+  --colors-pink-90: #602;
+  --colors-pink-80: #950434;
+  --colors-pink-60: #bf406a;
+  --colors-pink-40: #e87da1;
+  --colors-pink-20: #fbb6cd;
+  --colors-pink-10: #fee6ee;
+
+  --colors-neutral-100: #0d1a26;
+  --colors-neutral-90: #304050;
+  --colors-neutral-80: #5c6670;
+  --colors-neutral-60: #aeb3b7;
+  --colors-neutral-40: #dcdee0;
+  --colors-neutral-20: #eff0f0;
+  --colors-neutral-10: #fafafa;
+
+  --colors-brand-primary-100: #707963;
+  --colors-brand-primary-90: #858f76;
+  --colors-brand-primary-80: #b1be9d;
+  --colors-brand-primary-60: #ddedc4;
+  --colors-brand-primary-40: #e4f1d0;
+  --colors-brand-primary-20: #ebf4dc;
+  --colors-brand-primary-10: #eff7e4;
+
+  --colors-brand-secondary-100: #1c1c1c;
+  --colors-brand-secondary-90: #212121;
+  --colors-brand-secondary-80: #2b2b2b;
+  --colors-brand-secondary-60: #363636;
+  --colors-brand-secondary-40: #5e5e5e;
+  --colors-brand-secondary-20: #878787;
+  --colors-brand-secondary-10: #9c9c9c;
+
+  --background-color: var(--colors-white);
+  --color: var(--colors-black);
+
+  --secondary-background-color: var(--colors-black);
+  --secondary-color: var(--colors-white);
+
+  --accent-color: var(--colors-red-60);
+
+  --font-family: Verdana, Arial, sans-serif;
+  --heading-font-family: Georgia, "Times New Roman", serif;
+
+  --font-size: 16px;
+  --font-size-xxxs: 0.375rem;
+  --font-size-xxs: 0.5rem;
+  --font-size-xs: 0.75rem;
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 2.5rem;
+  --font-size-xxxxl: 3rem;
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --breakpoint-xxs-max: 480px;
+  --breakpoint-xs-min: 481px;
+  --breakpoint-xs-max: 768px;
+  --breakpoint-small-min: 769px;
+  --breakpoint-small-max: 1024px;
+  --breakpoint-large-min: 1025px;
+  --breakpoint-large-max: 1200px;
+  --breakpoint-xl-min: 1201px;
+}
+
+/* Theme - Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--secondary-background-color);
+    --color: var(--secondary-color);
+
+    --secondary-background-color: var(--background-color);
+    --secondary-color: var(--color);
+
+    --accent-color: rgb(from var(--accent-color) h s calc(l + 5%));
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
